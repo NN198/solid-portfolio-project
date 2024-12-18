@@ -2,12 +2,11 @@
  
 import React from 'react';
 import Image from 'next/image';
-import { useState } from "react"    
 import "../../globals.css"
 import profilePic from '../../../../public/profilephoto.jpeg';
 
 const Main: React.FC = () => {
-  const [photo, setPhoto] = useState(false);
+  
 
 
   return (
