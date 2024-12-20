@@ -1,6 +1,7 @@
 'use client'
 
-import {ThemeProvider} from 'next-themes'
+import {ThemeProvider, useTheme} from 'next-themes'
+import { Toaster } from '../components/ui/sonner'
 
 export default function Providers({children} : {children: React.ReactNode})
 {
@@ -11,6 +12,18 @@ export default function Providers({children} : {children: React.ReactNode})
         defaultTheme='system'
         disableTransitionOnChange
         >{children} 
+        <ToasterProvider />
         </ThemeProvider>
     )
 }
+
+function ToasterProvider() {
+    const { resolvedTheme } = useTheme()
+  
+    return (
+      <Toaster
+        position='top-right'
+        theme={resolvedTheme === 'dark' ? 'dark' : 'light'}
+      />
+    )
+  }

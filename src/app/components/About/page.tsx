@@ -8,7 +8,7 @@ import profilePic from '../../../../public/personal_img.jpg';
 const About: React.FC = () => {
   return (
     <main className="relative bg-[#0A2B35] h-screen w-full flex flex-col md:flex-row items-center md:items-start p-8 md:p-16">
-      {/* Profile Photo Section */}
+      {/* Profile Photo Section
       <div className="flex-shrink-0 w-full md:w-1/3 flex justify-center md:justify-start">
         <Image
           src={profilePic}
@@ -17,7 +17,7 @@ const About: React.FC = () => {
           height={250}
           className="object-cover rounded-full border-4 border-[#c07205]"
         />
-      </div>
+      </div> */}
 
       {/* Skills and Details Section */}
       <div className="mt-8 md:mt-0 md:ml-16 w-full md:w-2/3 text-[#DDB373] space-y-8">
