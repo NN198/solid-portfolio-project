@@ -1,5 +1,4 @@
 import Main   from "./components/Main/page";
-import About from './components/About/page'
 import Projects from './components/Projects/projectsHub'
 export default function Home() {
   return (
@@ -9,7 +8,7 @@ export default function Home() {
         <Main/>
         {/* <About/> */}
         <Projects/>
-        
+
       </div>
     </section>
     

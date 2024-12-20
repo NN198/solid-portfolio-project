@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import Image from 'next/image'
 
-// import { formatDate } from '@/lib/utils'
+import { formatDate } from '@/lib/utils'
 import MDXContent from '@/components/mdx-content'
 import { ArrowLeftIcon } from '@radix-ui/react-icons'
 import { getProjectBySlug, getProjects } from '@/lib/projects'
@@ -27,7 +27,7 @@ export default async function Project({
   }
 
   const { metadata, content } = project
-  const { title, image, author, publishedAt } = metadata
+  const { title, image, author, publishedAt} = metadata
 
   return (
     <section className='pb-24 pt-32'>
@@ -50,13 +50,13 @@ export default async function Project({
             />
           </div>
         )}
-{/* 
+
         <header>
           <h1 className='title'>{title}</h1>
           <p className='mt-3 text-xs text-muted-foreground'>
             {author} / {formatDate(publishedAt ?? '')}
           </p>
-        </header> */}
+        </header>
 
         <main className='prose mt-16 dark:prose-invert'>
           <MDXContent source={content} />

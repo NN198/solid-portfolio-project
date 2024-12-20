@@ -2,7 +2,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 import { ProjectMetadata } from '@/lib/projects'
-// import { formatDate } from '@/lib/utils'
+import { formatDate } from '@/lib/utils'
 
 export default function Projects({
   projects
@@ -34,9 +34,9 @@ export default function Projects({
               <p className='line-clamp-1 text-sm text-muted-foreground'>
                 {project.summary}
               </p>
-              {/* <p className='text-xs font-light text-muted-foreground'>
+              <p className='text-xs font-light text-muted-foreground'>
                 {formatDate(project.publishedAt ?? '')}
-              </p> */}
+              </p>
             </div>
           </Link>
         </li>

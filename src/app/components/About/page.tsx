@@ -1,9 +1,7 @@
 'use client'
 
 import React from 'react';
-import Image from 'next/image';
 import "../../../app/globals.css";
-import profilePic from '../../../../public/personal_img.jpg';
 
 const About: React.FC = () => {
   return (
