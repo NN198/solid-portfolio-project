@@ -41,6 +41,9 @@ export default function ContactForm() {
   }
 
   return (
+    <section className='pb-24 pt-40'>
+      <div className='container max-w-3xl'>
+        <h2 className='title'>Let&apos;s get in touch!</h2>
     <section className='relative isolate'>
       {/* Background pattern */}
       <svg
@@ -140,7 +143,7 @@ export default function ContactForm() {
               disabled={isSubmitting}
               className='w-full disabled:opacity-50'
             >
-              {isSubmitting ? 'Submitting...' : 'Contact Us'}
+              {isSubmitting ? 'Submitting...' : 'Submit'}
             </Button>
           </div>
           <p className='mt-4 text-xs text-muted-foreground'>
@@ -151,6 +154,8 @@ export default function ContactForm() {
           </p>
         </form>
       </div>
+    </section>
+    </div>
     </section>
   )
 }

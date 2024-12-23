@@ -2,7 +2,7 @@ import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
 
-const rootDirectory = path.join(process.cwd(), '/src/app', 'content')
+const rootDirectory = path.join(process.cwd(), '/src/app/content', 'projects')
 
 export type Project = {
   metadata: ProjectMetadata

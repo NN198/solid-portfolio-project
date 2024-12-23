@@ -15,7 +15,7 @@ export default function Header() {
             </li>
             </div>
           <li className='transition-colors hover:text-foreground'>
-            <Link href='/about'>About</Link>
+            <Link href='/experiences'>About Me</Link>
           </li>
           <li className='transition-colors hover:text-foreground'>
             <Link href='/projects'>Projects</Link>
