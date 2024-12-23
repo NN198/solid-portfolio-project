@@ -52,7 +52,7 @@ const Main: React.FC = () => {
         <br/>
         I love building software applications that help create impactful experiences for end-users
         <br/>
-        Enjoy problem solving and getting into the nitty-gritty of application development
+        I enjoy problem solving and getting into the nitty-gritty of application development
       </p>
       <br></br>
       <h4>Click below to find out more!</h4>
@@ -82,7 +82,7 @@ const Main: React.FC = () => {
     </div>
     <div className='relative'>
       <Image
-        className='flex-1 rounded-full'
+        className='flex-1 rounded-lg'
         src={profilePic}
         alt='Noella Noronha'
         width={300}
