@@ -1,57 +1,135 @@
 ---
   title: Movies Website
-  summary: A full-stack ecommerce store built with NextJs and Stripe.
-  image: /images/projects/ecommerce-store.jpg
-  author: 'Hamed Bahram'
-  publishedAt: '2024-08-04'
+  summary: A front-end developed movies recommendations website for checking the latest movie trends.
+  image: /images/projects/movies_website_img.png
+  author: 'Noella Noronha'
+  publishedAt: '2023-07-04'
 ---
 
-This is a full-stack ecommerce store built with NextJs and Stripe. It uses the
-`@stripe/stripe-js` package to handle payments and the `@next/bundle-analyzer`
-package to analyze the bundle size.
+This is a movies recommendations website that was created using the AngularJS framework built using client and server purposed API set-up
+<br/>
+**Github🔗** --> <a href="https://github.com/NN198/Product-on-angular">https://github.com/NN198/Product-on-angular</a>
 
-## Features
+<br/>
+<br/>
 
-- **Stripe Payments**: Accept payments using the Stripe API.
-- **Product Catalog**: Display products in a grid layout.
-- **Shopping Cart**: Add products to the shopping cart and checkout.
-- **User Authentication**: Allow users to sign up and log in.
-- **Order History**: View order history and track shipments.
+## Features ##
 
+- **Home Page**: Displays all the movies from latest to oldest along with header to navigate to different pages
+- **Top-rated/Upcoming Recommendations**: Give recommendations as per the ratings for maximum users
+- **Search Movies/Actors**: Allows users to search from a myriad of movies using the Search API
+- **Ratings**: Displays the ratings scrapped from IMdB and its subsidiaries
+
+<br/>
+<br/>
 ## Technologies
 
-- **NextJs**: A React framework for building static and dynamic websites.
-- **Stripe**: A payment processing platform for online businesses.
-- **Tailwind CSS**: A utility-first CSS framework for building custom designs.
-- **Vercel**: A cloud platform for static sites and serverless functions.
+- **TypeScript**: A strongly-typed superset of JavaScript that compiles to plain JavaScript.
+- **AngularJS**: AngularJS was used for rendering static and dynamic data to the application.
+- **Fast API/SwaggerUI**: A modern, fast (high-performance) web framework for building APIs with Python 3.6+ based on standard Python type hints. 
+- **MongoDB**: A lightweight, serverless, self-contained database engine
 
+<br/>
+<br/>
 ## Getting Started
 
 To get started with this project, you can clone the repository and install the
 dependencies:
 
+To install npm modules dependencies for Angular make sure to have it installed previously using the below command:
+
 ```bash
-git clone
-cd ecommerce-store
-npm install
+cd ecommerce-product
+npm install 
 ```
+or 
+```
+npm i
+```
+or 
+```
+ng add .
+```
+This application will run on Angular 11, to avoid conflict issues makes sure Node version is 12 or below.
 
 Once the dependencies are installed, you can run the development server:
 
 ```bash
 npm run dev
 ```
+or
 
-The development server will start at `http://localhost:3000`.
+```bash
+ng serve
+```
+
+The development server will start at `http://localhost:4200`.
+
+
+<br/>
+<br/>
 
 ## Deployment
 
 To deploy this project, you can use Vercel. You can link your GitHub repository
 to Vercel and deploy the project with a single click.
+To avoid linting or typescript conflicts during deployment save this in ~`tsconfig.app.json` 
 
-## Conclusion
+```
+eslint: {
+    // Warning: This allows production builds to successfully complete even if
+    // your project has ESLint errors.
+    ignoreDuringBuilds: true,
+  },
+  typescript: {
+    // !! WARN !!
+    // Dangerously allow production builds to successfully complete even if
+    // your project has type errors.
+    // !! WARN !!
+    ignoreBuildErrors: true,
+  },
+```
 
-This ecommerce store is a great example of how you can build a full-stack
-application with NextJs and Stripe. By integrating the Stripe API with NextJs,
-you can create a seamless shopping experience for your customers and manage
-payments securely and efficiently.
+<br/>
+<br/>
+
+## Project Structure
+
+```html
+ecommerce-product/
+├── e2e/
+├── src/
+│   ├── app/
+│   │   ├── genre/
+│   │   ├── header/
+│   │   ├── home/
+│   │   ├── main/
+│   │   ├── pagination/
+│   │   ├── search/
+│   │   └── singlemovie/
+│   │       ├── app-routing.module.ts
+│   │       ├── app.component.css
+│   │       ├── app.component.html
+│   │       ├── app.component.spec.ts
+│   │       ├── app.component.ts
+│   │       ├── app.module.ts
+│   │       ├── movie.service.spec.ts
+│   │       └── movie.service.ts
+│   ├── assets/
+│   ├── environments/
+│   ├── favicon.ico
+│   ├── index.html
+│   ├── main.ts
+│   ├── polyfills.ts
+│   └── styles.css
+├── tests/
+├── .browserslistrc
+├── .editorconfig
+├── .gitignore
+├── README.md
+├── angular.json
+├── karma.conf.js
+├── package-lock.json
+├── package.json
+└── tsconfig.app.json
+

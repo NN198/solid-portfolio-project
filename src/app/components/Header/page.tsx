@@ -15,10 +15,13 @@ export default function Header() {
             </li>
             </div>
           <li className='transition-colors hover:text-foreground'>
-            <Link href='/experiences'>About Me</Link>
+            <Link href='/experiences'>Experience</Link>
           </li>
           <li className='transition-colors hover:text-foreground'>
             <Link href='/projects'>Projects</Link>
+          </li>
+          <li className='transition-colors hover:text-foreground'>
+            <Link href='/publications'>Publications</Link>
           </li>
           <li className='transition-colors hover:text-foreground'>
             <Link href='/contact'>Contact</Link>

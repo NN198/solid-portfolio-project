@@ -1,0 +1,121 @@
+---
+  title: Weight Loss Mobile Application
+  summary: An android mobile application for moderating weight loss with features from recommending nutritious diet to end-users and sending notification alerts to regulate their fitness habits
+  image: /images/projects/weight_loss_geo.jpg 
+  author: 'Noella Noronha'
+  publishedAt: '2024-04-23'
+---
+
+An android mobile application built on Kotlin using Android Studio with JetPack Compose for moderating weight loss with features from recommending nutritious diet to end-users and sending notification alerts to regulate their fitness habits
+<br/>
+**Github🔗** --> <a href="https://github.com/NN198/Weight-Loss-Application">https://github.com/NN198/Weight-Loss-Application</a>
+
+<br/>
+<br/>
+
+## Features 
+
+- **User Login Page**: Allow users to login and gather basic information of their weight, bmi, sleep cycle and groceries they visit
+- **Geolocation-Based Recommendations**: Based on the initial location set by the user the app sends notifications to alert the users to buy groceries or meals that would nourish their diet
+- **Pedometer/Accelerator Sensors**: Gather data the steps covered by the user during the day or their work outs
+- **Notification/Alert Settings**: These notification were tailored to motivate the user to stay on track with their fitness goals and maintain an active lifestyle. Alerts to show the step count of the user especially when they are close to fitness studios or grocery stores
+
+<br/>
+<br/>
+## Technologies
+
+- **Kotlin**: A modern programming language used for building Android apps and server-side applications.
+- **Android Studio**: An integrated development environment (IDE) for building Android apps.
+- **JetPack Compose**: A modern toolkit for building native Android UIs. It simplifies UI development with declarative programming and is fully compatible with Kotlin. 
+- **SQLite**: A lightweight, serverless, self-contained database engine
+
+<br/>
+<br/>
+## Getting Started
+
+To get started with this project, you can clone the repository.
+In Android Studio, go to the top-right corner and click Sync Project with Gradle Files.
+This will download all necessary dependencies specified in your `build.gradle.kts` files.
+
+
+If you are using command line to run the project 
+- Open a terminal or command prompt.
+- Navigate to the project's root directory (where gradlew is located).
+-Run the following command to build:
+```bash
+git clone
+cd weight-loss-application
+./gradlew build
+```
+
+
+To install dependencies and build an Android project in Android Studio, you can use Gradle, the default build tool for Android projects. Follow these steps to set up and build your project:
+Navigate to the project's root directory (where gradlew is located).
+<br/>
+Run the following command to build:
+
+```bash
+./gradlew build
+```
+<br/>
+
+This will download dependencies, compile the code, package the app into APKs.
+Once the dependencies are installed, you can run the build through Android Studio IDE or through 
+Click Run -> Run 'app' in Android Studio, or execute:
+```bash
+./gradlew installDebug
+```
+
+<br/>
+<br/>
+
+## Deployment
+
+To deploy this project, you can use Vercel. You can link your GitHub repository
+to Vercel and deploy the project with a single click.
+
+<br/>
+<br/>
+
+## Project Structure
+
+```html
+app/
+├── src/
+│   ├── androidTest/java/com/cabcta10/
+│   │   └── weightloss/
+│   ├── main/
+│   │   ├── java/com/cabcta10/weightloss/
+│   │   │   ├── broadcastReceiver/
+│   │   │   ├── constants/
+│   │   │   ├── dao/
+│   │   │   ├── entity/
+│   │   │   ├── repository/
+│   │   │   │   └── impl/
+│   │   │   ├── screens/
+│   │   │   ├── service/
+│   │   │   ├── ui/theme/
+│   │   │   ├── uiState/
+│   │   │   ├── viewModel/
+│   │   │   ├── workerThread/
+│   │   │   ├── AppContainer.kt
+│   │   │   ├── AppDatabase.kt
+│   │   │   ├── AppProvider.kt
+│   │   │   ├── MainActivity.kt
+│   │   │   └── WeightLossApplication.kt
+│   │   └── res/
+│   │       └── AndroidManifest.xml
+│   └── test/java/com/cabcta10/
+│       └── weightloss/
+├── .gitignore
+├── build.gradle.kts
+├── gradle-wrapper.properties
+├── gradle-wrapper.jar
+├── gradle.properties
+├── gradlew
+├── gradlew.bat
+├── proguard-rules.pro
+├── settings.gradle.kts
+
+
+```

@@ -55,7 +55,7 @@ const Main: React.FC = () => {
         I enjoy problem solving and getting into the nitty-gritty of application development
       </p>
       <br></br>
-      <h4>Click below to find out more!</h4>
+      <h4>Find out more!</h4>
       <div
       style={{
         transform: `translateY(${position}px)`,
