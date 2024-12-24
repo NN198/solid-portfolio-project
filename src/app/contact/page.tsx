@@ -43,7 +43,7 @@ export default function ContactForm() {
   return (
     <section className='pb-24 pt-40'>
       <div className='container max-w-3xl'>
-        <h2 className='title'>Let&apos;s get in touch!</h2>
+        <h2 className='title'>Let&apos;s chat!</h2>
     <section className='relative isolate'>
       {/* Background pattern */}
       <svg

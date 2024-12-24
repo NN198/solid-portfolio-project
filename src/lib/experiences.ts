@@ -18,6 +18,7 @@ export type ExpMetadata = {
     role?: string
     startDate?: string
     endDate?: string
+    skills?: string
     slug: string
 }
 

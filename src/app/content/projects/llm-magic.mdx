@@ -1,29 +1,65 @@
 ---
   title: Benchmarks for AI detectors
-  summary: A full-stack ecommerce store built with NextJs and Stripe.
+  summary: This benchmark was prepared scrapping publicly available corpuses from HC3 to OpenWeb Corpus to test AI detectors against human-authoured and AI-generated texts.
   image: /images/projects/radar_analysis_img.png
-  author: 'Hamed Bahram'
+  author: 'Noella Noronha'
   publishedAt: '2024-08-04'
 ---
 
-This is a full-stack ecommerce store built with NextJs and Stripe. It uses the
-`@stripe/stripe-js` package to handle payments and the `@next/bundle-analyzer`
-package to analyze the bundle size.
+This benchmark was developed by scraping publicly available corpora, including HC3 and the OpenWeb Corpus, to evaluate AI detectors' effectiveness in distinguishing between human-authored and AI-generated texts.
+<br/>
+**Kaggle🔗**: <a href="https://www.kaggle.com/datasets/noellan/radar-prepared-benchmark/data">https://www.kaggle.com/datasets/noellan/radar-prepared-benchmark/data</a>
+<br/>
+**Github🔗**: <a href="https://github.com/NN198/LLM-Magic/blob/main/Dissertation_code.ipynb">https://github.com/NN198/LLM-Magic/blob/main/Dissertation_code.ipynb</a>
 
+<br/>
+<br/>
 ## Features
 
-- **Stripe Payments**: Accept payments using the Stripe API.
-- **Product Catalog**: Display products in a grid layout.
-- **Shopping Cart**: Add products to the shopping cart and checkout.
-- **User Authentication**: Allow users to sign up and log in.
-- **Order History**: View order hi                                     story and track shipments.
+The research involved preparing the data from publicly available corpora C4,
+OpenWebText, and HC3 to test detection capabilities of RADAR by formulating input
+tasks of zero-shot and few-shot strategies. Simple paraphrasing strategies were
+employed to evaluate how they affect the accuracy of RADAR’s performance in
+detecting machine-generated texts, specifically in cases involving longer responses
+of up to 512 tokens.
+Using smaller, transformer-based detector models like BERT or RoBERTa, the
+research’s major findings indicate that few-shot strategies significantly enhance
+detection accuracy, precision, and recall. Conversely, when the detector encounters
+paraphrased texts in a zero-shot setting, its detection capabilities are negatively
+impacted. To clarify, the model excelled in detecting AI-generated texts when utilizing
+few-shot approaches for paraphrased inputs, but the detector itself was not trained
+using these strategies. Instead, these strategies were used to assess the detector’s
+robustness in identifying AI-generated content without additional model training.
+
+<br/>
+<br/>
 
 ## Technologies
 
-- **NextJs**: A React framework for building static and dynamic websites.
-- **Stripe**: A payment processing platform for online businesses.
-- **Tailwind CSS**: A utility-first CSS framework for building custom designs.
-- **Vercel**: A cloud platform for static sites and serverless functions.
+- **Hugging Face**: A leading AI community and platform providing pre-trained models and tools for NLP, computer vision, and more. Hugging Face facilitates easy access to state-of-the-art transformers and ML pipelines.
+- **OpenAI API**: A powerful API enabling interaction with OpenAI’s advanced language models like GPT, providing capabilities for text generation, classification, and more.
+- **Llama 3.0^v Models**: Open-sourced language models optimized for a variety of NLP tasks, including text summarization, sentiment analysis, and question answering.
+- **Python 3.12**:  A versatile, high-level programming language widely used in data science, machine learning, and automation.
+- **Google Colab**: A cloud-based environment for writing and executing Python code, offering free access to GPUs and integration with popular libraries.
+
+
+<br/>
+<br/>
+
+## Libraries
+- **Transformers**: A library by Hugging Face for state-of-the-art natural language processing, enabling easy use of pre-trained transformer models like BERT, GPT, and T5.
+- **Accelerate**: A library by Hugging Face that simplifies the process of training and deploying deep learning models on various hardware setups like CPUs, GPUs, or TPUs.
+- **PyTorch**: An open-source deep learning framework that provides flexible tools for building, training, and deploying neural networks.
+- **Sklearn**: A widely used Python library for machine learning, providing tools for data preprocessing, classification, regression, clustering, and more.
+- **AutoTokenizer**: A Hugging Face utility for handling tokenization tasks, which converts text into tokens for model processing.
+- **AutoModelForSequenceClassification**: A pre-configured Hugging Face model class designed for sequence classification tasks like sentiment analysis and spam detection.
+
+
+
+
+
+<br/>
+<br/>
 
 ## Getting Started
 
@@ -32,26 +68,19 @@ dependencies:
 
 ```bash
 git clone
-cd ecommerce-store
-npm install
+cd LLM-Magic/Dissertation_code.ipynb
 ```
 
-Once the dependencies are installed, you can run the development server:
 
-```bash
-npm run dev
-```
+Once the cells for importing the libraries are installed, you can preload the dataset from Kaggle or mount in on the drive:
+<br/>
+## Disclaimer
+- **Training Models**: This would require some GPU resources which can either be purchased on Google Colab or run on local available GPT(above 8GB)
+- **Ollama**: For this project the Ollama model was hosted on nginx server to generate different forms of text data however, it can be run on most M1 Macs but might run slower on machines with 8GB RAM or lower.
 
-The development server will start at `http://localhost:3000`.
-
-## Deployment
-
-To deploy this project, you can use Vercel. You can link your GitHub repository
-to Vercel and deploy the project with a single click.
-
+<br/>
+<br/>
 ## Conclusion
-
-This ecommerce store is a great example of how you can build a full-stack
-application with NextJs and Stripe. By integrating the Stripe API with NextJs,
-you can create a seamless shopping experience for your customers and manage
-payments securely and efficiently.
+This project aimed to run experiments from various recently built language models that would produce AI texts close to human. 
+This prepared dataset being tested against the RADAR detector(Refer paper <a></a>) which not only described the accuracy of precision of 91% and recall of 90% for few-shot tasks
+but also a precision of 62.52% and recall of 62.33% for zero-shot tasks
