@@ -14,7 +14,14 @@ function calculateDateDifference(startDate: string, endDate: string) {
     months += 12
   }
 
-  return `${years} years ${months} months`
+  if (years<0) 
+  {
+    return `${months} months`
+  }
+  else 
+  {
+    return `${years} years ${months} months`
+  }
 }
 export default function Experiences({
     experiences
